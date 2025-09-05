@@ -11,6 +11,73 @@ a {
 
 ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+
+/* header */
+
+.topline {
+    border-bottom: 1px solid #e7e9fc;
+}
+
+.topline-container {
+    display: flex;
+    align-items: center;
+    
+}
+
+.topline-nav {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    padding: 24px 0;
+    margin-right: 76px;
+}
+
+.topline-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu {
+    display:block;
+    padding: 24px 0;
+}
+
+.address-list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0;
+    gap: 40px;
 }
 
 .logo {
@@ -46,6 +113,7 @@ ul {
 
 
 .topline-address {
+    margin-left: auto;
     font-size: 16px;
     line-height: 1.5;
     font-style: normal;
@@ -53,6 +121,8 @@ ul {
 }
 
 .contact {
+    display: block;
+    padding: 24px 0;
     color: #434455;
 } 
 
@@ -61,12 +131,18 @@ ul {
     color: #404bbf;
 }
 
+/* main-section */
+
 .main-section {
     background-color: #2e2f42;
     text-align: center;
+    padding: 188px 0;
 }
 
 .main-title {
+    max-width: 496px;
+    margin: 0 auto;
+    padding-bottom: 48px;
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
@@ -83,6 +159,10 @@ ul {
     background: #4d5ae5;
     font-family: "Roboto", sans-serif;
     cursor: pointer;
+    border-radius: 4px;
+    padding: 16px 32px;
+    /* width: 169px; */
+    padding: 16px 32px;
 }
 
 .main-button:hover,
@@ -90,7 +170,32 @@ ul {
     background: #404bbf;
 }
 
-.properties-list-title {
+/* properties */
+
+.properties-title {
+    position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        white-space: nowrap;
+        clip-path: inset(100%);
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+}
+
+.properties-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.properties-item {
+    max-width: calc((1158px - (24px * 3)) / 4);
+}
+
+.properties-item-title {    
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -103,7 +208,10 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    margin-top: 8px;
 }
+
+/* section-team */
 
 .team {
     background: #f4f4fd;
@@ -111,18 +219,29 @@ ul {
     color: #2e2f42;
     letter-spacing: 0.02em;
 }
+
+.team-list {
+    display: flex;
+    align-items: center;   
+    gap: 24px;
+}
+
 .team-title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
+    padding-bottom: 72px;
 }
 
 .team-member {
     background-color: #FFFFFF;
+    max-width: calc((1158px - (24px * 3)) / 4);
 }
+
 .team-member-name {
+    padding: 32px 0 8px 0;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -133,10 +252,26 @@ ul {
     font-size: 16px;
     line-height: 1.5;
     color: #434455;
+    padding-bottom: 32px;
 }
+
+/* portfolio */
 
 .portfolio {
     color: #2e2f42;
+}
+
+.portfolio-list {
+    display: flex;
+    align-items: center;   
+    flex-wrap: wrap;
+    row-gap: 48px;
+    column-gap: 24px;
+}
+
+.portfolio-item {
+    max-width: calc((1158px - (24px * 2)) / 3);
+    border-bottom: 1px solid #e7e9fc;
 }
 
 .portfolio-title {
@@ -146,6 +281,7 @@ ul {
     letter-spacing: 0.02em;
     text-align: center;
     text-transform: capitalize;
+    margin-bottom: 72px;
 }
 
 .portfolio-item-title {
@@ -153,6 +289,7 @@ ul {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    padding: 32px 0 8px 0;
 }
 
 .portfolio-item-description {
@@ -160,6 +297,13 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    padding-bottom: 32px;
+}
+
+/* footer */
+
+.final-container {
+    padding: 100px 0;
 }
 
 .final {
@@ -171,9 +315,11 @@ background-color: #2e2f42;
 }
 
 .final-description {
+    padding-top: 16px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+    max-width: 264px;
 }
 
